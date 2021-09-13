@@ -93,14 +93,22 @@ namespace APIClientApp
 			Console.WriteLine("Response Content as string");
 			Console.WriteLine(singleOutcodeResponse.Content);
 
+			//QUERY AS JOBJECT
+			var OutcodeJsonResponse = JObject.Parse(singleOutcodeResponse.Content);
+			Console.WriteLine(OutcodeJsonResponse["result"]["admin_ward"]);
+			var adminDistrict = OutcodeJsonResponse["result"]["admin_district"];
+			Console.WriteLine(adminDistrict.Type);
+			//Console.WriteLine(OutcodeJsonResponse["result"]["admin_district"]);
+			// QUERY AS C# OBJECT
 			var singleOutcode = JsonConvert.DeserializeObject<OutcodeResponse>(singleOutcodeResponse.Content);
+			/*
 			Console.WriteLine(singleOutcode.result.country[0]);
 
 			foreach (var result in singleOutcode.result.admin_ward)
 			{
 				Console.WriteLine(result);
 			}
-
+			*/
 		}
 	}
 }
