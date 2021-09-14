@@ -101,14 +101,14 @@ namespace APIClientApp
 			//Console.WriteLine(OutcodeJsonResponse["result"]["admin_district"]);
 			// QUERY AS C# OBJECT
 			var singleOutcode = JsonConvert.DeserializeObject<OutcodeResponse>(singleOutcodeResponse.Content);
-			/*
+			
 			Console.WriteLine(singleOutcode.result.country[0]);
 
 			foreach (var result in singleOutcode.result.admin_ward)
 			{
 				Console.WriteLine(result);
 			}
-			*/
+			
 		}
 	}
 }

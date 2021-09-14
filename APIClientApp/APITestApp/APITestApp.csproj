@@ -78,7 +78,11 @@
   <ItemGroup>
     <Compile Include="AppConfigReader.cs" />
     <Compile Include="Model.cs" />
+    <Compile Include="Services\OutcodeService.cs" />
+    <Compile Include="Services\BulkPostcodeService.cs" />
     <Compile Include="Services\SinglePostcodeService.cs" />
+    <Compile Include="Tests\WhenTheBulkPostcodeServiceIsCalled_WithValidPostcodes.cs" />
+    <Compile Include="Tests\WhenTheOutcodeServiceIsCalled_WithValidOutcode.cs" />
     <Compile Include="Tests\WhenTheSinglePostcodeServiceIsCalled_WithValidPostcode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
